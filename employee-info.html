@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/employee-info.css">
+    <script src="./assets/scripts/employee-info.js" defer></script>
+    <title>imployee info</title>
+</head>
+
+<body>
+    <div class="prev-page-btn">
+        <a class="prev-a-btn" href="./index.html">&#60;</a>
+    </div>
+    <span class="employee-info-span">
+        <a class="back-brn-respons" href="./index.html">&#60;</a>
+        <p>თანამშრომლის ინფო</p>
+        <p>ლეპტოპის მახასიათებლები</p>
+    </span>
+    <span class="page1-2">1/2</span>
+
+    <div class="form-wrapper">
+        <div class="form">
+
+            <div class="name-surname-wrapper">
+                <div id="name-input" class="name-input input-control">
+                    <label>სახელი</label>
+                    <input id="firstName" class="info-input" type="text" name="firstname" placeholder="ენცო">
+                    <div id="firstNameError" class="error">მინიმუმ 2 სიმბოლო, ქართული ასოები</div>
+                </div>
+                <div id="surname-input" class="surname-input">
+                    <label>გვარი</label>
+                    <input id="lastName" class="info-input" type="text" name="lastName" placeholder="აუდიტორე">
+                    <div id="lastNameError" class="error">მინიმუმ 2 სიმბოლო, ქართული ასოები</div>
+                </div>
+            </div>
+            <div class="selection-wrapper">
+                <div class="teams-selection">
+                    <select name="teams" id="teams" class="select-teams-and-positions">
+                        <option disabled selected hidden>თიმი</option>
+                    </select>
+                </div>
+                <div class="position-selection">
+                    <select name="positions" id="positions" class="select-teams-and-positions">
+                        <option disabled selected hidden>პოზიცია</option>
+                    </select>
+                </div>
+            </div>
+            <div class="email-phone-wrapper">
+                <div id="employee-email-input" class="employee-email-input">
+                    <label>მეილი</label>
+                    <input id="email" class="email-phoneNumber-info" type="text" name="email" placeholder="dezmond@redberry.ge">
+                    <div id="emailError" class="error">უნდა მთავრდებოდეს redberry.ge-ით</div>
+                </div>
+                <div id="employee-phone-input" class="employee-phone-input">
+                    <label>ტელეფონის ნომერი</label>
+                    <input id="phone" type="text" name="phone" placeholder="+995598696969" class="email-phoneNumber-info">
+                    <div class="error">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</div>
+                </div>
+            </div>
+            <div class="next-button-wrapper">
+                <button id="nextBtn" type="button" class="next-page-btn">შემდეგი</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-wrapper">
+        <footer>
+            <img src="./assets/icon/LOGO-10 2.png">
+        </footer>
+    </div>
+</body>
+
+</html>

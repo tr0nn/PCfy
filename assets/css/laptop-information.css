@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+}
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../font/HelveticaNeue.ttc);
+}
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #c7c7c7;
+  height: 1px;
+}
+/*footer */
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 67px;
+}
+
+/* back btn */
+.prev-page-btn {
+  margin: 54px 0 0 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border: 1px transparent;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+.prev-page-btn a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+  color: #2e2e2e;
+}
+/* თანამშრომლების ინფო - ლეპტოპის მახასიათებლები */
+.employee-info-span {
+  display: flex;
+  justify-content: center;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 54px;
+}
+p {
+  margin: 0;
+}
+
+.employee-info-span p:nth-of-type(2) {
+  border-bottom: 2px solid #000000;
+}
+
+p:first-of-type {
+  margin: 0 66px 0 0;
+  display: inline;
+}
+.back-brn-respons {
+  display: none;
+}
+.page1-2 {
+  display: none;
+}
+/* photo uload */
+
+.form-wrapper {
+  margin-top: 27px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  padding: 44px 174px 44px 174px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: 1px transparent;
+  line-height: 2;
+}
+.drop-zone-img {
+  /* max-width: 200px; */
+  height: 300px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #4386a9;
+  border: 3px dashed #4386a9;
+  border-radius: 10px;
+}
+.upload-img-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  background: #62a1eb;
+  border-radius: 8px;
+  color: #ffffff;
+
+  height: 60px;
+  cursor: pointer;
+}
+/* name & brand */
+input {
+  font-size: 21px;
+  padding: 16px;
+}
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.name-brand-wrapper {
+  margin: 50px 0px;
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+}
+.laptop-name {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.laptop-name input {
+  width: 407px;
+  border: 1.8px solid #8ac0e2;
+  border-radius: 8px;
+}
+.error {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+}
+.brand-select {
+  margin-top: 6px;
+  width: 408px;
+  height: 60px;
+  background: #ebebeb;
+  border-radius: 8px;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 16px;
+  margin-left: 63px;
+}
+.cpu-info-wrapper {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cpu-select,
+.cpu-core,
+.cpu-stream {
+  display: flex;
+  flex-direction: column;
+}
+.cpu-stream-input,
+.cpu-core-input,
+.cpu-select-data {
+  width: 277px;
+}
+
+.cpu-core-input,
+.cpu-stream-input {
+  border: 1.8px solid #8ac0e2;
+  border-radius: 8px;
+}
+.cpu-select-data {
+  margin-top: 8px;
+  background: #ebebeb;
+  border-radius: 8px;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 16px;
+}
+.ram-memory-wrapper,
+.bay-date-prace-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.cpu-info-wrapper {
+  margin-bottom: 50px;
+}
+.ram-memory-wrapper {
+  margin-bottom: 50px;
+}
+.ram-info {
+  display: flex;
+  flex-direction: column;
+}
+.ram-info input {
+  width: 407px;
+  border: 1.8px solid #8ac0e2;
+  border-radius: 8px;
+}
+.radio-btn-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 208px;
+}
+.memory-type {
+  display: flex;
+  flex-direction: column;
+  width: 408px;
+  align-items: flex-start;
+}
+.radio-btn-wrapper {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+/* bay &  price */
+.bay-date-info,
+.price-info {
+  margin-top: 50px;
+  display: flex;
+}
+.price-info input,
+.bay-date-info input {
+  width: 381px;
+  border: 1.8px solid #8ac0e2;
+  border-radius: 8px;
+}
+.bay-date-info,
+.price-info {
+  display: flex;
+  flex-direction: column;
+}
+.laptop-condition-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 408px;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.condition-leptop {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding-top: 30px;
+}
+/* back & save */
+.save-back-btn-wrapper {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.save-back-btn-wrapper a {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.08em;
+  color: #62a1eb;
+}
+.save-back-btn-wrapper button {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px transparent;
+  background: #62a1eb;
+  border-radius: 8px;
+  width: 176px;
+  height: 60px;
+  cursor: pointer;
+}
+.save-back-btn-wrapper button:active {
+  transform: translateY(4px);
+}
+.modal-window {
+  background-color: #4a4a4a;
+  height: 1080px;
+}
+.modal-window-wrapper {
+  margin-top: 271px;
+  margin-left: 554px;
+  background-color: white;
+  height: 537px;
+  width: 874px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-window-wrapper h1 {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 31px;
+  text-align: center;
+  color: #292929;
+}
+.modal-window-wrapper button {
+  background: #62a1eb;
+  border-radius: 8px;
+  padding: 18px 60px;
+  width: 297px;
+  height: 60px;
+  border: none;
+  margin-top: 50px;
+
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.modal-window-wrapper button:active {
+  transform: translateY(4px);
+}
+.modal-window-wrapper a {
+  margin-top: 28px;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #0089a7;
+  text-decoration: none;
+}
+#vect-hide,
+#vect-hideFor {
+  display: none;
+}

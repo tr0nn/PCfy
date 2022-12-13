@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/laptop-information.css">
+    <script src="./assets/scripts/laptop-information.js" defer></script>
+    <script src="./assets/scripts/add-image.js" defer></script>
+
+    <title>laptop info</title>
+</head>
+
+<body>
+    <div id="Upmodal-windows-close-open">
+    <div class="prev-page-btn">
+        <a class="prev-a-btn" href="./index.html">&#60;</a>
+    </div>
+    <span class="employee-info-span">
+        <a class="back-brn-respons" href="./index.html">&#60;</a>
+        <p>თანამშრომლის ინფო</p>
+        <p>ლეპტოპის მახასიათებლები</p>
+    </span>
+    <span class="page1-2">1/2</span>
+
+    <div class="form-wrapper">
+        <div class="form">
+
+            <div class="drop-zone-img">
+                <span class="drop-zone-prompt">
+                    <h2 id="img-warning-sign"></h2>
+                    <h4 id="drop-zone-word">ჩააგდე ან ატვირთე <br> ლეპტოპის ფოტო <br></h4>
+                    <span class="upload-img-button">ატვირთე</span>
+                </span>
+                <input id="img-saveId" type="file" name="imgfile">
+                <button id="imgBtn">savesavesave</button>
+            </div>
+
+            <div class="name-brand-wrapper">
+                <div id="laptop-div" class="laptop-name">
+                    <label>ლეპტოპის სახელი</label>
+                    <input id="leptop-name" type="text" name="laptop" placeholder="HP">
+                    <div class="error">ლათინური ასოები, ციფრები, !@#$%^&*()_+= </div>
+                </div>
+                <div class="laptop-brand">
+                    <select name="brand" id="brand-select" class="brand-select">
+                        <option disabled selected hidden>ლეპტოპის ბრენდი</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+
+            <div class="cpu-info-wrapper">
+                <div class="cpu-select">
+                    <select id="cpu-select" name="cpu" class="cpu-select-data">
+                        <option disabled selected hidden>CPU</option>
+                    </select>
+                </div>
+                <div id="cpu-core" class="cpu-core">
+                    <label>CPU-ს ბირთვი</label>
+                    <input id="cpu-core-input" class="cpu-core-input" type="text" name="cpu-core" placeholder="16">
+                    <div class="error">მხოლოდ ციფრები</div>
+                </div>
+                <div id="cpu-stream" class="cpu-stream">
+                    <label>CPU-ს ნაკადი</label>
+                    <input id="cpu-stream-input" class="cpu-stream-input" type="text" name="cpu-stream" placeholder="365">
+                    <div class="error">მხოლოდ ციფრები</div>
+                </div>
+            </div>
+            <div class="ram-memory-wrapper">
+                <div id="ram-info" class="ram-info">
+                    <label>ლეპტოპის RAM (GB)</label>
+                    <input id="ram" type="text" name="ram" placeholder="16">
+                    <div class="error">მხოლოდ ციფრები</div>
+                </div>
+                <div class="memory-type">
+                    <label id="memory-label">მეხსიერების ტიპი <img id="vect-hide" src="./assets/icon/Vector (11).png" alt="vect"></label>
+                    <div class="radio-btn-wrapper">
+                        <input id="HDDType" type="radio" name="memory-type-radio">HDD</input>
+                        <input id="SSDType" type="radio" name="memory-type-radio">SSD</input>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bay-date-prace-wrapper">
+                <div class="bay-date-info">
+                    <label>შეძენის რიცხვი (არჩევითი)</label>
+                    <input id="dateTime" type="date" name="bay-date">
+                </div>
+                <div id="price-info" class="price-info">
+                    <label>ლეპტოპის ფასი</label>
+                    <input id="laptopPrice" type="text" name="bay-price" placeholder="0000₾">
+                    <div class="error"> მხოლოდ ციფრები</div>
+                </div>
+            </div>
+            <div class="laptop-condition-wrapper">
+                <label id="leptCondVal">ლეპტოპის მდგომარეობა <img id="vect-hideFor" src="./assets/icon/Vector (11).png" alt="vect"></label>
+                <div class="condition-leptop">
+                    <input id="newLept" type="radio" name="condition-radio">ახალი</input>
+                    <input id="usedLept" type="radio" name="condition-radio">მეორადი</input>
+                </div>
+            </div>
+            <div class="save-back-btn-wrapper">
+                <a href="./employee-info.html" class="return-back-page">უკან</a>
+                <button onclick="openModalWindow" type="button" id="submitInfoBtn">დამახსოვრება</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <footer>
+            <img src="./assets/icon/LOGO-10 2.png">
+        </footer>
+    </div>
+    </div>
+
+    <div class="modal-window" id="modal-window-id">
+        <div class="modal-window-wrapper">
+            <img src="./assets/images/success.png">
+            <h1>ჩანაწერი დამატებულია!</h1>
+            <button onclick="closes()">სიაში გადაყვანა</button>
+            <a href="./index.html">მთავარი</a>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
