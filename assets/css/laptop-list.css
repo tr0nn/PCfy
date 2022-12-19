@@ -36,3 +36,39 @@ body {
   font-size: 34px;
   line-height: 21px;
 }
+#elemnt-wrapper img {
+  width: 266px;
+  height: 178px;
+  border-radius: 10px;
+}
+#elemnt-wrapper {
+  margin: 100px;
+  width: 563px;
+  height: 205px;
+  border: 1px solid #aed1ea;
+  border-radius: 20px;
+  background-color: #eafaff;
+  padding-top: 14px;
+  padding-left: 14px;
+  display: inline-block;
+  margin-left: 0px;
+}
+#element-Info {
+  padding-left: 28px;
+  display: inline-block;
+  text-align: center;
+}
+#element-Info a {
+  color: #4386a9;
+  text-decoration-line: underline;
+  width: 94px;
+  height: 21px;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+#laptop-card-template {
+  margin-left: 340px;
+}

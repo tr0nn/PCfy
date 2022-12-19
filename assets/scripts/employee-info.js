@@ -154,7 +154,7 @@ function employeeValidation() {
         position_id: positionId,
         phone_number: phone,
         email: email,
-        token: 'bb7ce127d231c6e21f21ecf05f1c9ea1'
+        token: 'a086b96f603f0accef75ef5bef8cf938'
       })
     );
     window.location.href = './laptop-information.html';

@@ -11,6 +11,7 @@ let laptInfoLS = JSON.parse(localStorage.getItem('laptop-info'));
 const laptopNameRegex = /^[a-zA-Z 0-9!@#$%^&*()_+=]+$/;
 const onluRegexNUmbers = /^[0-9]*$/;
 
+let imgFile;
 let imgUrl;
 let cpuId; // აღარ გამომიყენებია რადგან api ში მიდის string სახით და არა id.
 let leptopBrandId;
@@ -100,7 +101,7 @@ fileEl.addEventListener('change', () => {
     const img = new Image();
     img.src = url;
     imgUrl = url;
-    localStorage.setItem('my-image', url);
+    imgFile = fileEl.files[0];
   });
 });
 
@@ -208,11 +209,12 @@ function leptopValidation() {
     document.getElementById('vect-hideFor').style.display = 'none';
   }
 
+  let formData = new FormData();
   if (lepFormVal) {
     window.localStorage.setItem(
       'laptop-info',
       JSON.stringify({
-        laptop_name: leptopName,
+        //laptop_name: leptopName,
         //laptop_image: imgUrl,
         laptop_brand_id: leptopBrandId,
         laptop_cpu: leptopCPU.value.replaceAll(',', ' '),
@@ -225,43 +227,42 @@ function leptopValidation() {
         laptop_price: price
       })
     );
-    console.log(emplInfoLS + ' - ' + laptInfoLS);
-    alert('amis mere');
-    submitPostForm();
-  }
-}
+    console.log(leptopName);
 
-function submitPostForm() {
-  fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
-    method: 'POST',
-    body: JSON.stringify({
-      name: emplInfoLS.name,
-      surname: emplInfoLS.lastname,
-      team_id: emplInfoLS.team_id,
-      position_id: emplInfoLS.position_id,
-      phone_number: emplInfoLS.phone_number,
-      email: emplInfoLS.email,
-      token: emplInfoLS.token,
-      laptop_name: laptInfoLS.laptop_name,
-      //laptop_image: imgUrl,
-      laptop_brand_id: laptInfoLS.laptop_brand_id,
-      laptop_cpu: laptInfoLS.laptop_cpu,
-      laptop_cpu_cores: laptInfoLS.laptop_cpu_cores,
-      laptop_cpu_threads: laptInfoLS.laptop_cpu_threads,
-      laptop_ram: laptInfoLS.laptop_ram,
-      laptop_hard_drive_type: laptInfoLS.laptop_hard_drive_type,
-      laptop_state: laptInfoLS.laptop_state,
-      laptop_purchase_date: laptInfoLS.laptop_purchase_date,
-      laptop_price: laptInfoLS.laptop_price
+    formData.append('name', emplInfoLS.name);
+    formData.append('surname', emplInfoLS.lastname);
+    formData.append('team_id', emplInfoLS.team_id);
+    formData.append('position_id', emplInfoLS.position_id);
+    formData.append('phone_number', emplInfoLS.phone_number);
+    formData.append('laptop_name', leptopName);
+    formData.append('email', emplInfoLS.email);
+    formData.append('token', emplInfoLS.token);
+    formData.append('laptop_image', fileEl.files[0]);
+    formData.append('laptop_brand_id', laptInfoLS.laptop_brand_id);
+    formData.append('laptop_cpu', laptInfoLS.laptop_cpu);
+    formData.append('laptop_cpu_cores', laptInfoLS.laptop_cpu_cores);
+    formData.append('laptop_cpu_threads', laptInfoLS.laptop_cpu_threads);
+    formData.append('laptop_ram', laptInfoLS.laptop_ram);
+    formData.append(
+      'laptop_hard_drive_type',
+      laptInfoLS.laptop_hard_drive_type
+    );
+    formData.append('laptop_state', laptInfoLS.laptop_state);
+    formData.append('laptop_purchase_date', laptInfoLS.laptop_purchase_date);
+    formData.append('laptop_price', laptInfoLS.laptop_price);
+
+    fetch('https://pcfy.redberryinternship.ge/api/laptop/create', {
+      method: 'POST',
+      body: formData
     })
-  })
-    .then(response => {
-      console.log(response.json());
-      if (response.status <= 299) {
-        alert('good');
-      }
-    })
-    .catch(err => {
-      alert(err);
-    });
+      .then(response => {
+        if (response.status <= 299) {
+          alert('submit');
+          localStorage.clear();
+        }
+      })
+      .catch(err => {
+        alert(err);
+      });
+  }
 }
