@@ -28,7 +28,6 @@ let leptopName,
 
 downModalWindow.style.display = 'none';
 
-//მოდალ ფანჯარა რომ გამოჩნდეს laptop-information.html ში გავუწერო openModalWindow() buttonს. -------------------------------------------
 function openModalWindow() {
   UpModalWindow.style.display = 'none';
   downModalWindow.style.display = 'block';
@@ -36,8 +35,6 @@ function openModalWindow() {
 
 function closes() {
   window.location.href = './laptop-list.html';
-  //   UpModalWindow.style.display = 'block';
-  //   downModalWindow.style.display = 'none';
 }
 
 fetch('https://pcfy.redberryinternship.ge/api/brands')
@@ -56,7 +53,6 @@ fetch('https://pcfy.redberryinternship.ge/api/cpus')
   .then(cpusDate => {
     cpusDate = Object.entries(cpusDate)[0][1];
     cpusDate.forEach(item => {
-      //console.log(item.name.replaceAll(' ', ','));
       document.getElementById(
         'cpu-select'
       ).innerHTML += `<option value=${item.name.replaceAll(' ', ',')} id=${
@@ -214,8 +210,6 @@ function leptopValidation() {
     window.localStorage.setItem(
       'laptop-info',
       JSON.stringify({
-        //laptop_name: leptopName,
-        //laptop_image: imgUrl,
         laptop_brand_id: leptopBrandId,
         laptop_cpu: leptopCPU.value.replaceAll(',', ' '),
         laptop_cpu_cores: cpuCore,
@@ -227,7 +221,7 @@ function leptopValidation() {
         laptop_price: price
       })
     );
-    console.log(leptopName);
+    console.log(leptopName + ' - ' + laptInfoLS.laptop_brand_id);
 
     formData.append('name', emplInfoLS.name);
     formData.append('surname', emplInfoLS.lastname);

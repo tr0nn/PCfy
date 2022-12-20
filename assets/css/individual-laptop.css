@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  background-color: white;
+}
+.mainForm {
+  padding-left: 371px;
+  padding-right: 371px;
+  padding-top: 84px;
+}
+.img-persInfo-wrapper img {
+  width: 577px;
+  height: 342px;
+}
+.img-persInfo-wrapper {
+  display: inline-block;
+}
+.pers-info-wrapper {
+  display: inline-block;
+  padding-left: 68px;
+  padding-top: 50px;
+}
+.pers-info-label {
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #2e2e2e;
+}
+.pers-info-value {
+  display: inline-block;
+  padding-left: 80px;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #797979;
+}
+.info-cpu-left {
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #2e2e2e;
+}
+.cpu-info-right {
+  padding-left: 380px;
+  display: inline-block;
+}
+.name-ram {
+  display: inline-block;
+}
+.name-ram-value {
+  display: inline-block;
+  padding-left: 88px;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #797979;
+}
+.cpu-name {
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #2e2e2e;
+
+  margin-left: -73px;
+}
+.cpu-name-value {
+  padding-left: 65px;
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #797979;
+}
+.condition-left {
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #2e2e2e;
+}
+.date-right {
+  display: inline-block;
+  padding-left: 250px;
+}
+.price-condition {
+  display: inline-block;
+}
+.price-condition-value {
+  padding-left: 40px;
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #797979;
+}
+.date {
+  display: inline-block;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #2e2e2e;
+}
+.date-value {
+  display: inline-block;
+  padding-left: 56px;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: #797979;
+}

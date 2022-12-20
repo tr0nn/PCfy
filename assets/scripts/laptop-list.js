@@ -1,6 +1,6 @@
 let cardTemplate = document.getElementById('laptop-card-template');
 let El;
-let token = 'a086b96f603f0accef75ef5bef8cf938';
+let token = 'b1f042809f068118cc1f5c706c35bd81';
 
 fetch('https://pcfy.redberryinternship.ge/api/laptops?token=' + token)
   .then(response => response.json())
@@ -15,7 +15,7 @@ fetch('https://pcfy.redberryinternship.ge/api/laptops?token=' + token)
       <div id="elemnt-wrapper">
         <img src=${
           'https://pcfy.redberryinternship.ge/' + leptopInfo[1].image
-        } alt="image" class="laptop-image" id="laptopImg"/>
+        } alt="image"/>
         <div id="element-Info">
           <h2>${userInfo[1].name} ${userInfo[1].surname}</h2>
           <p>${leptopInfo[1].name}</p>
@@ -25,6 +25,5 @@ fetch('https://pcfy.redberryinternship.ge/api/laptops?token=' + token)
         </div>
       </div>
       `;
-      //console.log(leptopInfo[1].id);
     });
   });

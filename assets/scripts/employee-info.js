@@ -22,7 +22,6 @@ positionsSelection.addEventListener('change', () => {
       for (let i = 0; i < posId.length; i++) {
         if (posId[i].name.replaceAll(' ', ',') == positionsSelection.value) {
           positionId = posId[i].id;
-          //console.log(positionId);
         }
       }
     });
@@ -66,7 +65,6 @@ nextBtn.addEventListener('click', () => {
   employeeValidation();
 });
 
-// fucntions
 function emplErrorValShow(divId, inputId) {
   document.getElementById(divId).style.color = 'red';
   document.getElementById(inputId).style.border = '1.8px solid red';
@@ -154,7 +152,7 @@ function employeeValidation() {
         position_id: positionId,
         phone_number: phone,
         email: email,
-        token: 'a086b96f603f0accef75ef5bef8cf938'
+        token: 'b1f042809f068118cc1f5c706c35bd81'
       })
     );
     window.location.href = './laptop-information.html';
